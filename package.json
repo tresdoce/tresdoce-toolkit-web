@@ -1,0 +1,28 @@
+{
+  "name": "root",
+  "private": true,
+  "scripts": {
+    "test": "lerna exec --no-bail npm run test",
+    "bootstrap": "lerna bootstrap",
+    "clean": "lerna exec npm run clean",
+    "lint": "lerna exec --no-bail npm run lint",
+    "build": "lerna exec npm run build",
+    "lint-staged": "lerna exec --no-bail npm run lint-staged",
+    "publish": "lerna exec npm run publish"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^8.1.0",
+    "@commitlint/config-conventional": "^8.1.0",
+    "@tresdoce-toolkit/eslint-config": "0.0.1",
+    "eslint": "^6.3.0",
+    "husky": "^2.7.0",
+    "lerna": "^3.15.0"
+  },
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
+      "pre-commit": "npm run lint-staged && npm run test"
+    }
+  },
+  "dependencies": {}
+}

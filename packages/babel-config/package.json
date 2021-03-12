@@ -4,6 +4,10 @@
   "description": "Babel configuration for SPA",
   "main": "index.js",
   "author": "TresDoce",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/TresDoce/tresdoce-toolkit-web.git"
+  },
   "scripts": {
     "lint": "true",
     "lint-staged": "true",

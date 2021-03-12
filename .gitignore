@@ -1,1 +1,24 @@
-# Created by .ignore support plugin (hsz.mobi)
+.cache
+npm-debug.log
+node_modules
+packages/**/pkg
+packages/**/dist
+packages/**/coverage
+packages/**/node_modules
+
+.next
+.DS_Store
+out
+.env.local
+.env
+
+#IDES
+**/.idea/**
+.idea
+/.idea
+.vscode/**
+**/.vscode/**
+.vscode
+/.vscode
+yarn.lock
+package-lock.json

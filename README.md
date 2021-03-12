@@ -4,11 +4,11 @@ Este repositorio contiene un conjunto de librerías utilitarias y de funcionalid
 
 ## Paquetes
 
-### `@galicia-toolkit/eslint-config` [- Documentación](packages/eslint-config/README.md)
+### `@tresdoce-toolkit/eslint-config` [- Documentación](packages/eslint-config/README.md)
 
 #### Reglas de ESlint comunes a las SPA
 
-### `@galicia-toolkit/babel-config`
+### `@tresdoce-toolkit/babel-config`
 
 #### Reglas de Babel
 
