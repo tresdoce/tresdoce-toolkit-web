@@ -1,6 +1,6 @@
 {
   "name": "@tresdoce-toolkit/babel-config",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "Babel configuration for SPA",
   "main": "index.js",
   "author": "TresDoce",
