@@ -8,6 +8,9 @@
     "type": "git",
     "url": "https://github.com/TresDoce/tresdoce-toolkit-web.git"
   },
+  "publishConfig": {
+    "registry": "http://143.198.236.101:4873/"
+  },
   "scripts": {
     "lint": "true",
     "lint-staged": "true",
