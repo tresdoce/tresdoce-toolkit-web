@@ -1,0 +1,62 @@
+{
+  "name": "@tresdoce-toolkit/spa-build-config",
+  "version": "1.0.0",
+  "description": "SPA build related configs",
+  "main": "dist/index.js",
+  "author": "TresDoce",
+  "scripts": {
+    "clean": "shx rm -rf pkg",
+    "prebuild": "npm run clean",
+    "build": "shx mkdir -p pkg/dist && shx cp -r src/* pkg/dist && shx cp -r bin package.json pkg",
+    "lint": "eslint --fix --ext .ts,.tsx,.js src",
+    "lint-staged": "lint-staged",
+    "test": "",
+    "coverage": ""
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/TresDoce/tresdoce-toolkit-web.git"
+  },
+  "publishConfig": {
+    "registry": "http://143.198.236.101:8081/repository/npm-private/"
+  },
+  "dependencies": {
+    "@types/next": "8.0.6",
+    "@types/react": "^16.9.11",
+    "@types/react-dom": "^16.9.3",
+    "@types/styled-jsx": "^2.2.8",
+    "@zeit/next-css": "^1.0.1",
+    "@zeit/next-typescript": "^1.1.1",
+    "babel-plugin-idx": "^2.4.0",
+    "custom-event-polyfill": "^1.0.7",
+    "next-compose-plugins": "^2.2.0",
+    "next-images": "^1.2.0",
+    "proxy-polyfill": "^0.3.0",
+    "react": "^16.11.0",
+    "react-app-polyfill": "^1.0.6",
+    "react-dom": "^16.11.0",
+    "shx": "^0.3.2"
+  },
+  "peerDependencies": {
+    "next": "8.1.x"
+  },
+  "eslintConfig": {
+    "extends": "@tresdoce-toolkit"
+  },
+  "devDependencies": {
+    "@tresdoce-toolkit/eslint-config": "1.0.1",
+    "eslint": "^6.6.0",
+    "lint-staged": "^9.4.2",
+    "prettier": "^1.18.2"
+  },
+  "lint-staged": {
+    "*.{js,json,css,md}": [
+      "prettier --write",
+      "git add"
+    ],
+    "*.{js,ts,tsx}": [
+      "eslint --fix --ext .ts,.tsx,.js",
+      "git add"
+    ]
+  }
+}
