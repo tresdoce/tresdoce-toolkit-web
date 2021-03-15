@@ -1,6 +1,6 @@
 {
   "name": "@tresdoce-toolkit/eslint-config",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Eslint configuration for SPA",
   "main": "index.js",
   "author": "TresDoce",
