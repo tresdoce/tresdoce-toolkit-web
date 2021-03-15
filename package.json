@@ -1,9 +1,6 @@
 {
   "name": "root",
   "private": true,
-  "publishConfig": {
-    "registry": "http://143.198.236.101:8081/repository/npm-private/"
-  },
   "scripts": {
     "test": "lerna exec --no-bail npm run test",
     "bootstrap": "lerna bootstrap",
