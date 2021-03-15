@@ -27,6 +27,5 @@
   },
   "devDependencies": {
     "cpy-cli": "^2.0.0"
-  },
-  "gitHead": "200c2cc9bced29e9568fb2e79763396838a79048"
+  }
 }

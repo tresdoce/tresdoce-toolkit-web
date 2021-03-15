@@ -8,11 +8,12 @@
     "lint": "lerna exec --no-bail npm run lint",
     "build": "lerna exec npm run build",
     "lint-staged": "lerna exec --no-bail npm run lint-staged",
-    "publish": "lerna exec npm run publish"
+    "publish": "lerna exec npm publish"
   },
   "devDependencies": {
     "@commitlint/cli": "^8.1.0",
     "@commitlint/config-conventional": "^8.1.0",
+    "@tresdoce-toolkit/babel-config": "^1.0.0",
     "eslint": "^6.3.0",
     "husky": "^2.7.0",
     "lerna": "^3.15.0"
