@@ -7,7 +7,7 @@
   "scripts": {
     "test": "lerna exec --no-bail npm run test",
     "bootstrap": "lerna bootstrap",
-    "clean": "lerna exec npm run clean",
+    "clean": "lerna clean --yes",
     "lint": "lerna exec --no-bail npm run lint",
     "build": "lerna exec npm run build",
     "lint-staged": "lerna exec --no-bail npm run lint-staged",
