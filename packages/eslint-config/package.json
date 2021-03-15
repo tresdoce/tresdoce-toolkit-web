@@ -1,6 +1,6 @@
 {
   "name": "@tresdoce-toolkit/eslint-config",
-  "version": "1.0.1",
+  "version": "1.0.0",
   "description": "Eslint configuration for SPA",
   "main": "index.js",
   "author": "TresDoce",
@@ -9,7 +9,7 @@
     "url": "https://github.com/TresDoce/tresdoce-toolkit-web.git"
   },
   "publishConfig": {
-    "registry": "http://143.198.236.101:4873/"
+    "registry": "http://143.198.236.101:8081/repository/npm-private/"
   },
   "scripts": {
     "lint": "eslint --fix --ext .ts,.tsx,.js .",
