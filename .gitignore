@@ -5,6 +5,7 @@ packages/**/pkg
 packages/**/dist
 packages/**/coverage
 packages/**/node_modules
+lerna-debug.log
 
 .next
 .DS_Store
