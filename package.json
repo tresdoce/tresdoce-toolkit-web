@@ -1,9 +1,6 @@
 {
   "name": "root",
   "private": true,
-  "publishConfig": {
-    "registry": "http://143.198.236.101:8081/repository/npm-private/"
-  },
   "scripts": {
     "test": "lerna exec --no-bail npm run test",
     "bootstrap": "lerna bootstrap",
@@ -11,7 +8,7 @@
     "lint": "lerna exec --no-bail npm run lint",
     "build": "lerna exec npm run build",
     "lint-staged": "lerna exec --no-bail npm run lint-staged",
-    "publish": "lerna exec -- npm run publish"
+    "publish": "lerna exec npm run publish"
   },
   "devDependencies": {
     "@commitlint/cli": "^8.1.0",
