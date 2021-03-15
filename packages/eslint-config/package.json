@@ -48,5 +48,5 @@
   "eslintConfig": {
     "extends": "./index"
   },
-  "gitHead": "a91def07801c50bbfc120bb99c8d849f22f7aa28"
+  "gitHead": "200c2cc9bced29e9568fb2e79763396838a79048"
 }
