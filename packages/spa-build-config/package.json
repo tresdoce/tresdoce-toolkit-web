@@ -7,7 +7,8 @@
   "scripts": {
     "clean": "shx rm -rf pkg",
     "prebuild": "npm run clean",
-    "build": "shx mkdir -p pkg/dist && shx cp -r src/* pkg/dist && shx cp -r bin package.json pkg",
+    "build": "shx mkdir -p pkg/dist && shx cp -r src/* pkg/dist",
+    "build_old": "shx mkdir -p pkg/dist && shx cp -r src/* pkg/dist && shx cp -r bin package.json pkg",
     "lint": "eslint --fix --ext .ts,.tsx,.js src",
     "lint-staged": "lint-staged",
     "test": "",

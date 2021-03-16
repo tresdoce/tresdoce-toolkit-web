@@ -1,0 +1,4 @@
+{
+  "extends": "@tresdoce-toolkit/babel-config",
+  "plugins": ["babel-plugin-idx"]
+}
