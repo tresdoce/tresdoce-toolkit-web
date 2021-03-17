@@ -4,6 +4,14 @@ Este repositorio contiene un conjunto de librerías utilitarias y de funcionalid
 
 ## Paquetes
 
+### `@galicia-toolkit/core`
+
+#### Helpers y Componentes integrales a las SPA's
+
+- **Config:** gestión de configuración provista desde la aplicación web
+- **Navigation:** Componente Link y helpers para navegación
+- **Analitycs:** Herramientas para analytics
+
 ### `@tresdoce-toolkit/eslint-config` [- Documentación](packages/eslint-config/README.md)
 
 #### Reglas de ESlint comunes a las SPA
