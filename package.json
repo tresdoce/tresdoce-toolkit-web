@@ -8,7 +8,8 @@
     "lint": "lerna exec --no-bail npm run lint",
     "build": "lerna exec npm run build",
     "lint-staged": "lerna exec --no-bail npm run lint-staged",
-    "publish": "lerna exec npm publish"
+    "publish": "lerna exec npm publish",
+    "version": "npm run build"
   },
   "devDependencies": {
     "@commitlint/cli": "^8.1.0",
