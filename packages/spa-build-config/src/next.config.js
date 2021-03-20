@@ -19,42 +19,42 @@ const createBuildJson = (dir, outDir, distDir, buildId) => {
   const version = packageJson.version;
   const buildManifest = require(join(distDir, 'build-manifest.json'));
 
-  /*// Get versions of Galicia UI and Galicia Toolkit
-    const dependencies = Object.keys(packageJson.dependencies).reduce(
-        (result, dep) => {
-            if (dep.startsWith('@galicia') || dep.startsWith('@brick')) {
-                result[dep] = require(join(
-                    dir,
-                    `./node_modules/${dep}/package.json`
-                )).version;
-            }
+  // Get versions of Tresdoce UI and Tresdoce Toolkit
+  const dependencies = Object.keys(packageJson.dependencies).reduce(
+    (result, dep) => {
+      if (dep.startsWith('@tresdoce')) {
+        result[dep] = require(join(
+          dir,
+          `./node_modules/${dep}/package.json`
+        )).version;
+      }
 
-            return result;
-        },
-        {}
-    );
+      return result;
+    },
+    {}
+  );
 
-    // Get versions of Galicia UI and Galicia Toolkit
-    const devDependencies = Object.keys(packageJson.devDependencies).reduce(
-        (result, dep) => {
-            if (dep.startsWith('@galicia') || dep.startsWith('@brick')) {
-                result[dep] = require(join(
-                    dir,
-                    `./node_modules/${dep}/package.json`
-                )).version;
-            }
+  // Get versions of Tresdoce UI and Tresdoce Toolkit
+  const devDependencies = Object.keys(packageJson.devDependencies).reduce(
+    (result, dep) => {
+      if (dep.startsWith('@tresdoce')) {
+        result[dep] = require(join(
+          dir,
+          `./node_modules/${dep}/package.json`
+        )).version;
+      }
 
-            return result;
-        },
-        {}
-    );*/
+      return result;
+    },
+    {}
+  );
 
   const buildMetadata = {
     id: buildId,
     version,
     manifest: buildManifest,
-    //dependencies,
-    //devDependencies,
+    dependencies,
+    devDependencies,
   };
 
   fs.writeFileSync(

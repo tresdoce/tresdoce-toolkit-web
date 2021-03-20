@@ -11,10 +11,9 @@ const configSourceMaps = (config, baseLocation = '/') => {
     ? packageJson.name.split('/')[1]
     : packageJson.name;
 
-  const publicPath =
-    `https://cdn.statically.io/${componentName}/` +
-    (isDevBuild ? 'dev' : packageJson.version) +
-    baseLocation;
+  const publicPath = `https://cdn.statically.io/${componentName}/${
+    isDevBuild ? 'dev' : packageJson.version
+  }${baseLocation}`;
 
   config.plugins.push(
     new webpack.SourceMapDevToolPlugin({
