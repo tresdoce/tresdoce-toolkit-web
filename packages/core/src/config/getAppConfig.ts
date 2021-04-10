@@ -1,7 +1,7 @@
 import { AppConfig } from '../typings';
 import memoizeOne from 'memoize-one';
 import idx from 'idx';
-import merge from 'deepmerge';
+import _ from 'lodash';
 import { isSSR } from './utils';
 
 interface EnvironmentsConfig {
@@ -41,7 +41,7 @@ export const getAppConfig = memoizeOne(
             const serverSideConfig =
                 idx(window, _ => _.__NEXT_DATA__.props.pageProps) || {};
 
-            return merge(serverSideConfig, spaConfig[distributionChannel] || {});
+            return _.merge(spaConfig[distributionChannel] || {},serverSideConfig);
         }
     }
 );

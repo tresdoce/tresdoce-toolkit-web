@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "scripts": {
     "clean": "rimraf pkg",
-    "publish": "pika publish",
+    "pika:publish": "pika publish",
     "build": "npm run clean && pika build",
     "lint": "eslint --fix --ext .ts,.tsx,.js src",
     "lint-staged": "lint-staged",
@@ -105,6 +105,7 @@
     "date-fns": "^2.0.0-alpha.36",
     "deepmerge": "^4.0.0",
     "js-cookie": "^2.2.1",
+    "lodash": "^4.17.21",
     "ls-cache": "^0.2.3",
     "memoize-one": "^5.0.5",
     "path-to-regexp": "^3.1.0"
