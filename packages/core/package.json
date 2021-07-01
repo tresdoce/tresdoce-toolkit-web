@@ -103,7 +103,6 @@
     "axios": "^0.18.0",
     "currency.js": "^1.2.2",
     "date-fns": "^2.0.0-alpha.36",
-    "deepmerge": "^4.0.0",
     "js-cookie": "^2.2.1",
     "lodash": "^4.17.21",
     "ls-cache": "^0.2.3",

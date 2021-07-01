@@ -11,6 +11,8 @@ export interface Config {
     debug: boolean;
     /** Domain base for services cookies, usually `".domain.com.ar"` on development or production */
     cookieDomain: string;
+    /** Channel of the SPA, example: `"channel-1"` */
+    channelId: string;
     /** Distribution Channel, on local development may be `"local-mock"` or `"local-dev"` */
     distributionChannel: string;
     /**

@@ -1,6 +1,6 @@
 import React from 'react';
 import {Link as ReachLink} from '@reach/router';
-import {getBasepath, normalizeUrl} from './navigate';
+import { getBasepath, normalizeUrl } from './navigate';
 
 export const Link = ({
                          to = '',

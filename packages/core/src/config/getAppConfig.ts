@@ -18,7 +18,16 @@ const getDistributionChannel = () => {
     if (isSSR()) {
         return process.env.ENV || 'local-mock';
     } else {
-        const distributionChannel = idx(window, _ => _.__NEXT_DATA__.props.pageProps.config.distributionChannel);
+        if (idx(window, _ => _.IsStandAlone)) {
+            window.__NEXT_DATA__.props.pageProps.config.distributionChannel =
+                window.ENV;
+        }
+
+        const distributionChannel = idx(
+            window,
+            _ => _.__NEXT_DATA__.props.pageProps.config.distributionChannel
+        );
+
         if (distributionChannel) {
             return distributionChannel;
         }
@@ -41,7 +50,9 @@ export const getAppConfig = memoizeOne(
             const serverSideConfig =
                 idx(window, _ => _.__NEXT_DATA__.props.pageProps) || {};
 
-            return _.merge(spaConfig[distributionChannel] || {},serverSideConfig);
+            return idx(window, _ => _.IsStandAlone)
+                ? _.merge(serverSideConfig, spaConfig[distributionChannel] || {})
+                : _.merge(spaConfig[distributionChannel] || {}, serverSideConfig);
         }
     }
 );

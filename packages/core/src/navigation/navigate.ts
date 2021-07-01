@@ -9,6 +9,10 @@ export const getBasepath = () => {
         : config.appBasepath;
 };
 
+export let normalized = true
+
+export const setNormalized = (val:boolean) => normalized = val
+
 export function normalizeUrl(url) {
     return url
         .normalize('NFD')
@@ -17,7 +21,7 @@ export function normalizeUrl(url) {
         .toLowerCase();
 }
 
-export function navigate(to, options?, normalize = true, absolute = false) {
+export function navigate(to, options?, normalize = normalized, absolute = false) {
     if (!absolute && to[0] === '/') {
         to = getBasepath() + to;
     }

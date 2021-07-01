@@ -11,7 +11,7 @@ const configSourceMaps = (config, baseLocation = '/') => {
     ? packageJson.name.split('/')[1]
     : packageJson.name;
 
-  const publicPath = `https://static.tresdoce.com.ar/${componentName}/${
+  const publicPath = `https://static-pre.tresdoce.com.ar/${componentName}/${
     isDevBuild ? 'dev' : packageJson.version
   }${baseLocation}`;
 

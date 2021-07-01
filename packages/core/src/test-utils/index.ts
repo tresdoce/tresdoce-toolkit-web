@@ -1,5 +1,5 @@
 import { AppConfig } from '../typings';
-import merge from 'deepmerge';
+import lodash from 'lodash';
 
 const localMockConfig: AppConfig = {
     config: {
@@ -14,15 +14,20 @@ const localMockConfig: AppConfig = {
                 basepath: 'http://localhost',
                 withCredentials: true,
             },
+            'bff-channel': {
+                basepath: '',
+                withCredentials: true,
+            },
         },
         appBasepath: '',
         cdnBasepath: '',
+        channelId: 'onb',
         distributionChannel: 'local-mock'
-    },
+    }
 };
 
 export const addTestConfig = (mergedOptions: object = {}) => {
     window.__NEXT_DATA__ = {
-        props: { pageProps: merge(localMockConfig, mergedOptions) },
+        props: { pageProps: lodash.merge(localMockConfig, mergedOptions) },
     };
 };

@@ -1,4 +1,4 @@
-import {AppConfig} from '../typings';
+import { AppConfig } from '../typings';
 
 const LocalMockConfig: AppConfig = {
     config: {
@@ -7,6 +7,7 @@ const LocalMockConfig: AppConfig = {
         api: {},
         appBasepath: '/',
         cdnBasepath: '',
+        channelId: '',
         distributionChannel: 'local-mock'
     }
 };
@@ -24,7 +25,7 @@ describe('config test', () => {
 
     test('calling getAppConfig on SSR with no addConfig should throw', async () => {
         mockSSR();
-        const {getAppConfig} = await import('./getAppConfig');
+        const { getAppConfig } = await import('./getAppConfig');
         expect(() => getAppConfig()).toThrow(
             'you must call addConfig with your distribution local-mock before any getAppConfig usage'
         );
@@ -32,8 +33,8 @@ describe('config test', () => {
 
     test('calling addConfig on SSR will make getAppConfig not to throw', async () => {
         mockSSR();
-        const {getAppConfig, addConfig} = await import('./getAppConfig');
-        addConfig({'local-mock': LocalMockConfig});
+        const { getAppConfig, addConfig } = await import('./getAppConfig');
+        addConfig({ 'local-mock': LocalMockConfig });
         expect(getAppConfig()).toStrictEqual(LocalMockConfig);
     });
 

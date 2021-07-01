@@ -1,3 +1,3 @@
 export { Link } from './Link';
-export { navigate } from './navigate';
+export { navigate, setNormalized } from './navigate';
 export * from './helpers';
