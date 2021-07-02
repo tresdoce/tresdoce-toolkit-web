@@ -4,7 +4,7 @@
   "scripts": {
     "clean": "rimraf pkg",
     "pika:publish": "pika publish",
-    "build": "npm run clean && pika build",
+    "build": "npm run clean && pika build && shx cp -r .npmrc pkg",
     "lint": "eslint --fix --ext .ts,.tsx,.js src",
     "lint-staged": "lint-staged",
     "test": "jest",
@@ -107,7 +107,8 @@
     "lodash": "^4.17.21",
     "ls-cache": "^0.2.3",
     "memoize-one": "^5.0.5",
-    "path-to-regexp": "^3.1.0"
+    "path-to-regexp": "^3.1.0",
+    "shx": "^0.3.3"
   },
   "eslintConfig": {
     "extends": "@tresdoce-toolkit"
