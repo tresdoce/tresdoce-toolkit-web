@@ -27,7 +27,7 @@ export const loadScript = url =>
         };
 
         script.onabort = msg => {
-            reject(new Error('Script loading aboirted.'));
+            reject(new Error('Script loading aborted.'));
         };
 
         if (tag.parentNode != null) {
